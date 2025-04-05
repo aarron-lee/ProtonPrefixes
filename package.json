@@ -1,6 +1,6 @@
 {
   "name": "proton-prefixes",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Simple util for to find Proton prefixes",
   "main": "index.js",
   "scripts": {

@@ -158,6 +158,7 @@ function initSteam(app) {
             name,
             appid,
             prefixPath,
+            details: app,
           });
         }
       } catch (e) {
@@ -176,6 +177,7 @@ function initSteam(app) {
             name: AppName,
             appid,
             prefixPath,
+            details: app,
           });
         }
       } catch (e) {

@@ -2,6 +2,7 @@ const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("electronUtils", {
   getSteamGames: () => ipcRenderer.send("getSteamGames"),
+  openPrefixFolder: (path) => ipcRenderer.send("openPrefixFolder", path),
   // From frontend to backend.
   send: (channel, args) => {
     ipcRenderer.send(channel, args);

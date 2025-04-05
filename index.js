@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Tray, ipcMain, Menu } = require("electron");
+const { app, BrowserWindow, Tray, ipcMain, Menu, shell } = require("electron");
 const path = require("path");
 const { initializeSettings, IS_WINDOW_HIDDEN } = require("./src/settings");
 const { setItem, getItem } = initializeSettings(app);
@@ -56,6 +56,10 @@ ipcMain.on("getSteamGames", (_) => {
     "gamesInfo",
     prefixPaths.sort((a, b) => a.name.localeCompare(b.name)),
   );
+});
+
+ipcMain.on("openPrefixFolder", (_, path) => {
+  shell.showItemInFolder(path);
 });
 
 app.on("window-all-closed", () => {

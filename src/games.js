@@ -1,10 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
   electronUtils.getSteamGames();
-  // fetch("services.json")
-  //   .then((response) => response.json())
-  //   .then((json) => {
-
-  //   });
 });
 
 electronUtils.receive("gamesInfo", (data) => {
@@ -41,6 +36,25 @@ function updateAppInfo(name, info) {
   el.setAttribute("style", `padding-left: 1rem;`);
 
   el.innerHTML = generateDescription(name, info);
+
+  const openPathButton = document.createElement("button");
+
+  openPathButton.innerHTML = "Open Prefix in File Browser";
+
+  openPathButton.addEventListener("click", (e) => {
+    electronUtils.openPrefixFolder(`${info.prefixPath}/pfx/drive_c`);
+  });
+
+  openPathButton.setAttribute(
+    "style",
+    `
+        text-transform: capitalize;
+        padding: 1rem;
+        border: 1px solid black;
+      `,
+  );
+
+  el.appendChild(openPathButton);
 }
 
 function generateDescription(name, appInfo) {

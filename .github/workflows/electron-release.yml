@@ -58,7 +58,7 @@ jobs:
       - name: publish to github release
         uses: softprops/action-gh-release@v1
         with:
-          files: /tmp/artifacts/flathub-electron/ProtonPrefixes_v*_linux.AppImage
+          files: /tmp/artifacts/ProtonPrefixes/ProtonPrefixes_v*_linux.AppImage
           tag_name: ${{ github.ref_name }}
           body: |
             ProtonPrefixes Release

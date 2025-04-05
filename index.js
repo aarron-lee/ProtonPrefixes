@@ -69,7 +69,7 @@ app.on("window-all-closed", () => {
 });
 
 function createTray() {
-  tray = new Tray(path.join(__dirname, "./static/icon.png"));
+  tray = new Tray(path.join(__dirname, "./img/icon.png"));
 
   tray?.setToolTip("ProtonPrefixes");
 }

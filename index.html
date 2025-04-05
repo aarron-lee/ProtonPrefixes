@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="author" content="aarron-lee" />
+        <title>Proton Prefixes</title>
+    </head>
+
+    <body>
+        <div id="gamesContainer">
+            <div id="gamesList"></div>
+            <div id="gameInfo">Loading...</div>
+        </div>
+    </body>
+
+    <script src="src/games.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        button,
+        input[type="submit"],
+        input[type="reset"] {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+        }
+        #gamesContainer {
+            display: flex;
+            flex-direction: row;
+        }
+        #gamesList {
+            display: flex;
+            flex-direction: column;
+            height: 700px;
+            overflow-y: visible;
+            overflow-x: hidden;
+            min-width: 150px;
+        }
+        #gameInfo {
+            display: flex;
+            flex-direction: column;
+            height: 700px;
+            width: 100%;
+            overflow-y: visible;
+            overflow-x: hidden;
+        }
+    </style>
+</html>

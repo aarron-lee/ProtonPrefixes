@@ -1,0 +1,43 @@
+{
+  "name": "proton-prefixes",
+  "version": "0.0.5",
+  "description": "Simple util for to find Proton prefixes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.aarronlee.proton-prefixes",
+    "productName": "ProtonPrefixes",
+    "files": [
+      "index.js",
+      "index.html",
+      "package.json",
+      "src"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "img/icon-white.svg",
+      "artifactName": "${productName}_v${version}_linux.${ext}",
+      "category": "Utility"
+    }
+  },
+  "keywords": [],
+  "author": "aarron-lee",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "packageManager": "pnpm@8.15.4+sha1.c85a4305534f76d461407b59277b954bac97b5c4",
+  "dependencies": {
+    "@node-steam/vdf": "^2.2.0",
+    "glob": "^11.0.1",
+    "jschardet": "^3.1.4",
+    "steam-binary-vdf": "^0.1.0"
+  }
+}

@@ -1,8 +1,8 @@
 # ProtonPrefixes
 
-![app](./screenshots/app.png)
-
 A simple app for finding + opening proton prefixes
+
+![app](./screenshots/app1.png)
 
 ## Installation
 
